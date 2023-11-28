@@ -1,5 +1,5 @@
 # R@dar
-A platform for CTF.
+A platform for CTFer.
 
 ## R@dar-WIKI
 
@@ -8,5 +8,10 @@ A platform for CTF.
 
 
 ## Team member
+- ID
+- Blog
+- Tech
 
-
+## About Team
+- Info
+- Awards
