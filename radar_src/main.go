@@ -8,13 +8,13 @@ import (
 func main() {
 	r := gin.Default()
 	r.GET("/radar", logger.SetLogger(
-		logger.WithSkipPath([]string{"/skip"}),
+		logger.SetLogger(),
 	), func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "hi hacker",
 		})
 	})
-	err := r.Run()
+	err := r.Run(":7777")
 	if err != nil {
 		return
 	}
