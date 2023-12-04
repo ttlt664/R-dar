@@ -15,7 +15,6 @@ type Config struct {
 	}
 }
 
-// LoadConfig loads the configuration from config.toml file
 func LoadConfig() (*Config, error) {
 	var config Config
 

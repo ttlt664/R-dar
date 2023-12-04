@@ -1,0 +1,3 @@
+# .gitignore
+radar_src/config/config.toml
+radar_src/config/config.ini
