@@ -10,12 +10,7 @@ func InitRouter() {
 	r := gin.New()
 	r.Use(middleware.Logger())
 	r.Use(gin.Recovery())
-
 	r.Use(middleware.Cors())
-
-	// start 配置前端访问
-	r.LoadHTMLGlob("static/admin/index.html")
-	r.Static("admin/static", "static/admin/static")
 
 	r.GET("admin", func(c *gin.Context) {
 		c.HTML(200, "index.html", nil)

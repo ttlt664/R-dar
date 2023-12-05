@@ -18,6 +18,7 @@ CREATE TABLE radar_wiki (
        title VARCHAR(255) NOT NULL,
        oss_path VARCHAR(255) NOT NULL,
        author_nickname VARCHAR(50) NOT NULL,
+       tag VARCHAR(50) NOT NULL DEFAULT 'None',
        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
        FOREIGN KEY (author_id) REFERENCES users(user_id)
 );

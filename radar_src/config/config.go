@@ -13,6 +13,7 @@ type Config struct {
 		Formatter string `toml:"formatter"`
 		LogPath   string `toml:"log_path"`
 	} `toml:"log"`
+	
 	OSS struct {
 		Endpoint   string `toml:"endpoint"`
 		AccessKey  string `toml:"access_key"`
@@ -26,14 +27,11 @@ func LoadConfig() (*Config, error) {
 	viper.AddConfigPath("config")
 	viper.SetConfigName("config")
 	viper.SetConfigType("toml")
-
 	if err := viper.ReadInConfig(); err != nil {
 		return nil, err
 	}
-
 	if err := viper.Unmarshal(&config); err != nil {
 		return nil, err
 	}
-
 	return &config, nil
 }
